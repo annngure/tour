@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<body>
+<h1 class="text-center">Business in the Hood.</h1>
+    <div class="row">
+        {%for locals in locals%} 
+       <div class="col-sm-4 col-md-4 col-lg-4">       
+            <div class="card"style="width: 18rem;">
+                <div class="card-body">
+                    
+                    <p>Local-Name:{{locals.name}}</p>
+                    <p>Location:{{locals.Location}}</p>
+                    <p>Local-Email:{{locals.email }}</p>
+
+
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+
+</body>
+{%endblock%}

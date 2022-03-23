@@ -65,3 +65,41 @@ def profileView(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
+
+def search_locals(request):
+    if 'locals' in request.GET and request.GET["locals"]:
+        search_term = request.GET.get("locals")
+        searched_locals = Locals.search_locals(search_term)
+        message = f"{search_term}"
+        context={
+        "message":message,
+        "locals": searched_locals
+        }
+        return render(request, 'search.html',context)
+
+    else:
+        message = "You haven't searched yet"
+        return render(request, 'search.html')
+
+def post(request):
+    if request.method=="POST":
+        form = LocalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Post sucessful.")
+            return redirect('local')   
+    else:
+        messages.error(request,"Invalid Information")
+        form = PostForm()
+    context={
+        "form":form}
+    return render(request,'post.html',context)
+
+def local_post(request):
+    locals=Locals.objects.all()
+    
+    context ={
+       "locals":locals
+    }
+    return render(request,'local.html',context)
+  

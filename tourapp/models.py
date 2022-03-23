@@ -19,3 +19,17 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
     
+
+class Locals(models.Model):
+    name= models.CharField(max_length=100,null=True)
+    Location = models.CharField(max_length=255, null=True)
+    email=models.EmailField()
+
+    def save_locals(self):
+        self.save()
+
+    def delete_locals(self):
+        self.delete()
+    
+    def __str__(self):
+        return self.name

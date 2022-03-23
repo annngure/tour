@@ -1,0 +1,22 @@
+{% extends 'base.html'%} 
+
+{% block content %}
+<div style="height: 100%;">
+  <div class="">
+    {% if locals %}
+    <div>
+        <div>
+          <h2 class="text-center font-weight-bold">Found {{ business}} business for searched term {{message}}</h2>
+        </div>
+      </div>
+    {% else %}
+    <div>
+        <div>
+          <h2 class="text-center font-weight-bold">Found 0 business for the searched term {{message}}</h2>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+
+{% endblock %}

@@ -19,8 +19,14 @@ class NewUserForm(UserCreationForm):
         if commit:
             user.save()
         return user
-        
+
 class UpdateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile 
         fields = ("name","occupation","profile_image","Location","email")
+
+
+class LocalForm(forms.ModelForm):
+    class Meta:
+        model = Locals
+        fields =("name","Location","email")

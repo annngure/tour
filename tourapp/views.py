@@ -51,7 +51,7 @@ def profileView(request):
         if form.is_valid():
             form.save()
             messages.success(request,"Profile sucessful.")
-        return redirect ('occupant')
+        return redirect ('index')
 
     else:
         messages.error(request,"Invalid Information")

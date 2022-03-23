@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{%load bootstrap4%}
+
+{% block content%}
+
+<head>
+    <style>
+
+    </style>
+</head>
+<body style="background-image: url(https://wanderingminstrelette.files.wordpress.com/2016/01/neighborhood.jpg)" ></body>
+<div class="text-center">
+  <h1>HOOD.</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-primary" style="max-width:25rem;">
+        <div class="card-body text-center">
+          <form method="post" style="font-family:'Times New Roman', Times, serif;">
+            {% csrf_token %} {% bootstrap_form form %}
+            <div class="form-group">
+                <input type="submit" class="btn btn-danger btn-sm" value="Sign Up">
+            </div>
+            <input type="hidden" name="next" value="{{next}}">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+
+</body>
+
+{%endblock%}

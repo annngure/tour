@@ -24,6 +24,7 @@ class Locals(models.Model):
     name= models.CharField(max_length=100,null=True)
     Location = models.CharField(max_length=255, null=True)
     email=models.EmailField()
+    phonenumber=models.IntegerField(max_length=255, null=True)
 
     def save_locals(self):
         self.save()

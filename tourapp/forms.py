@@ -29,4 +29,4 @@ class UpdateProfileForm(forms.ModelForm):
 class LocalForm(forms.ModelForm):
     class Meta:
         model = Locals
-        fields =("name","Location","email")
+        fields =("name","Location","email","phonenumber")

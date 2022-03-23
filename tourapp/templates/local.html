@@ -3,6 +3,7 @@
 {%block content%}
 
 <body>
+    {% include 'navbar.html' %}
 <h1 class="text-center">Locals Near You.</h1>
     <div class="row">
         {%for locals in locals%} 
@@ -13,6 +14,7 @@
                     <p>Local-Name:{{locals.name}}</p>
                     <p>Location:{{locals.Location}}</p>
                     <p>Local-Email:{{locals.email }}</p>
+                    <p>Local-Phone No:{{locals.phonenumber}}</p>
 
 
                 </div>

@@ -90,7 +90,7 @@ def post(request):
             return redirect('local')   
     else:
         messages.error(request,"Invalid Information")
-        form = PostForm()
+        form = LocalForm()
     context={
         "form":form}
     return render(request,'post.html',context)

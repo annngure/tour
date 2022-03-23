@@ -13,6 +13,7 @@ urlpatterns=[
     path('profile/',views.profileView, name="profile"),
     path('local/',views.local_post,name="local"),
     path('search/',views.search_locals,name ='search'),
-    path('post/',views.post,name="post")
+    path('post/',views.post,name="post"),
+    path('host/',views.host, name='host')
 
 ]

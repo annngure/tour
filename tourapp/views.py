@@ -10,6 +10,9 @@ from .models import *
 def index(request):
     return render(request,'index.html')
 
+def host(request):
+    return render(request,'host.html')
+
 
 def registerView(request):
     if request.method=="POST":

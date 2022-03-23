@@ -23,7 +23,7 @@ class Profile(models.Model):
 
 class Locals(models.Model):
     name= models.CharField(max_length=100,null=True)
-    image = CloudinaryField('image',null=True)
+    # image = CloudinaryField('image',null=True)
     Location = models.CharField(max_length=255, null=True)
     email=models.EmailField()
     phonenumber=models.IntegerField(null=True)

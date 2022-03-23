@@ -2,18 +2,11 @@
 <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Charmonman|Kodchasan|Dancing+Script|Spirax" rel="stylesheet">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ol class="nav-item active">
-        <a class="navbar-brand" href="{% url 'index' %}">HOOD.</a>
+        <a class="navbar-brand" href="{% url 'index' %}">TOUR.</a>
     </ol>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             {% if user.is_authenticated %}
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font-family:'Times New Roman', Times, serif;">
-             <ol class="nav-item active">
-                <a href="{% url 'profile' %}" class="nav-link">Edit Profile</a>
-             </ol> 
-             
-             <ol class="nav-item active">
-              <a href="{% url 'occupant' %}" class="nav-link">Occupants.</a>
-           </ol> 
 
             <ol class="nav-item active">
               <a class="nav-link"href="{%url 'logout'%}">Logout</a>
@@ -21,11 +14,11 @@
             </ol>
 
             <ol class="nav-item active">
-              <a class="nav-link"href="{%url 'business_post'%}">View Business.</a>
+              <a class="nav-link"href="{%url 'local'%}">View Locals.</a>
             
             </ol>
             <ol class="nav-item active">
-              <a class='nav-link' href="{%url 'post'%}">Post Business.</a>
+              <a class='nav-link' href="{%url 'post'%}">Register Locals.</a>
             </ol>
             {% else %}
             <ol class="nav-item active" style="font-family:'Times New Roman', Times, serif;">

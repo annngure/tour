@@ -1,28 +1,34 @@
 {%extends "base.html"%}
 
+{%load bootstrap4%}
 <head>
     <meta charset="utf-8">
     {% block styles %}
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    {% endblock styles%} 
-     
+
+       {% endblock styles%} 
+   
+
 </head>
 
 {%block content%}
 
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif;background-color: whitesmoke;">
     {% include 'navbar.html' %}
     <br>
     <br>
     <br>
-    <p class = "text-center" style="font-weight:bold;font-size:larger">Welcome.</p>
-    <p class ="text-center" >Here is where tourists are connect with locals for more experience.</p>
-    <p class="text-center">Get to see places that you never thought they exsit.</p> 
-    <p class="text-center">Tourist get to experience culture.</p> 
-    <br>
+    <div class="container">
+        <p class = "text-center" style="font-weight:bold;font-size:larger">Welcome.</p>
+        <p class ="text-center" >Here is where tourists are connect with locals for more experience.</p>
+        <p class="text-center">Get to see places that you never thought they exsit.</p> 
+        <p class="text-center">Tourist get to experience culture.</p> 
+    </div>
+    
     <br>
     <hr>
+    <h1 class="text-center">Recommended places</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-4">       
@@ -48,11 +54,9 @@
                         <h4>Name:HighLands</h4>
                     </div> 
                 </div>
-
+               
         </div>
    </div>
-</div>
-    
 
 </body>
 {%endblock%}
